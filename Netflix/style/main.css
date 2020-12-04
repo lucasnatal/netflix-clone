@@ -1,0 +1,105 @@
+:root { /* Declação de variável */
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Com essa opção, faz com que os elementos se adequem ao tamanho do elemento que se encontra. Ex.: uma div de 400px e uma imagem de 600px; a imagem vai se adequar aos 400px, portanto não vai invadir os espaços de outros elementos.*/
+}
+
+/* Elementos base*/
+
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+header .container {
+    display: flex; /* Modo de alinhamento de tela: o flex joga tudo pra mesma linha como default. */
+    flex-direction: row; /* O row é o valor default do display flex. */
+    align-items: center; /* Alinhamento na vertical quando a direction é row. */
+    justify-content: space-between; /* Alinhamento na horizontal quando a direction é row. space-between alinha para ter o maior espaçamento possível entre todas as tags. */
+}
+
+header .logo {
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover { /* Evento ancora */
+    color: #FFF;
+}
+
+/* Filme Principal */
+
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('../img/capa-south-park.jpg');
+    
+    height: 400px;
+    background-size: cover; /* A opção cover cobre a div toda. */
+
+    display: flex; /* O display afeta apenas os elementos filhos. Se uma div for uma neta, ela não é afetada; o padrão é esse através do display:block. */
+    flex-direction: column;
+    justify-content: center; /* Alinhamento vertical centralizado */;
+    align-items: flex-start; /* Alinhamento horizontal para a esquerda.*/;
+
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .3s ease all /* Efeito */;
+}
+
+.botao:hover { /*Quando passar o mouse no elemento que contém a classe botao.*/
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 5px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
